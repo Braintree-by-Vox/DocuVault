@@ -1,4 +1,4 @@
-DOCUVAULT
+Overview
 ---
 The DocuVault extension for Microsoft Dynamics 365 Business Central is the SharePoint integration offering from Braintree.
 
