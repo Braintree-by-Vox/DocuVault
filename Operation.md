@@ -15,4 +15,4 @@ The following functions are provided:
 
 Allows the user to move all embedded files to SharePoint. It will maintain record links where available. Orphaned files will be added to an orphaned folder so that the user can action them manually where and if needed. 
 
-[**⬆️ Back to Top**](#using-the-sharepoint-documents-factbox) &nbsp;&nbsp;&nbsp;&nbsp; [**🏠 Home**](/Docuvault)
+[**⬆️ Back to Top**](#using-the-sharepoint-documents-factbox) &nbsp;&nbsp;&nbsp;&nbsp; [**🏠 Home**](/DocuVault)
