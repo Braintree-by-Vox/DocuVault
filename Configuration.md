@@ -1,14 +1,5 @@
-# Overview
+# Setup and Configuration
 
-The DocuVault extension for Microsoft Dynamics 365 Business Central provides direct integration between Sharepoint and Microsoft Dynamics 365 Business Central. The extension includes the following features:
-
-- Maintain SharePoint links to any record contained in standard Business Central tables, ISV tables or custom tables.
-- Use Docuvault's Sharepoint Documents factbox on all standard Business Central documents 
-- Migrate embedded attachments to SharePoint.
-- Maintain links from quotes through to Posted Documents and archived versions.
-- Upload multiple documents simultaneously.
-
-## Content
 - [Azure App Registration](#azure-app-registration)
 - [SharePoint Access](sharepoint-access)
 - [DocuVault Setup](docuvault-setup)
@@ -137,4 +128,4 @@ However, keep in mind that the links will refer to the folder where the link was
 If required, we can assist you with extending your environment with SharePoint attachments, by adding the SharePoint factbox for custom tables or redirecting the default save location.
 
 
-[**⬆️ Back to Top**](#content) &nbsp;&nbsp;&nbsp;&nbsp; [**🏠 Home**](/Docuvault)
+[**⬆️ Back to Top**](#content) &nbsp;&nbsp;&nbsp;&nbsp; [**🏠 Home**](/Readme)
