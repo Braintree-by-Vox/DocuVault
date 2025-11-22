@@ -14,4 +14,4 @@ Before using DocuVault, some initial setups and configurations are required.
 ## [Using the DocuVault Factbox](Operation)
 
 ## Extending DocuVault functionality
-If required, we can assist you with extending your environment with SharePoint attachments, by adding the SharePoint factbox for custom tables or redirecting the default save location.  
+If required, we can assist you with extending your environment with SharePoint attachments, by adding the SharePoint factbox for custom tables or redirecting the default save location.
