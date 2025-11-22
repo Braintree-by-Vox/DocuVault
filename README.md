@@ -1,5 +1,5 @@
-Overview
----
+# Overview
+
 The DocuVault extension for Microsoft Dynamics 365 Business Central is the SharePoint integration offering from Braintree.
 
 The extension includes the following features:
@@ -11,7 +11,8 @@ The extension includes the following features:
 - Maintains links from quote through to Posted Documents and archived versions
 - Upload multiple documents at a time
 
-- [Setup and Configuration](#2-setup-and-configuration)
+## Content
+- [Setup and Configuration](#setup-and-configuration)
   - [Azure App Registration](#21-azure-app-registration)
   - [SharePoint Access](#22-sharepoint-access)
   - [DocuVault Setup](#23-docuvault-setup)
@@ -22,11 +23,14 @@ The extension includes the following features:
 - [SharePoint Documents factbox](#3-sharepoint-documents-factbox)
 - [Migrate Document Attachments to SharePoint](#4-migrate-document-attachments-to-sharepoint)
 
-# <a name="Setup and Configuration"></a>2. Setup and Configuration
+<!-- # <a name="Setup and Configuration"></a>2. Setup and Configuration -->
+
+## Setup and Configuration
 
 To start using DocuVault, some initial setup and configuration are required.
 
-## <a name="Azure App Registration"></a>2.1. Azure App Registration
+### Azure App Registration
+
 You need to create an app registration in Azure with the Sites.Selected permission:
      ![alt text](./img/image.png)
 
@@ -41,7 +45,7 @@ To find your SharePoint Site ID, you can follow these steps:
 > **NOTE**: Use the **Site ID** in the DocuVault Setup and the below queries.
 
 
-## <a name="SharePoint Access"></a>2.2. SharePoint Access
+### SharePoint Access
 
 To find your SharePoint Drive ID and grant access to the App Registration in SharePoint:    
 1. Go to: https://developer.microsoft.com/en-us/graph/graph-explorer , make sure to sign in before you do the next steps
@@ -69,7 +73,7 @@ Find your id there:
 
 > **NOTE**: Use the **Drive ID** in the DocuVault setup.
 
-## <a name="DocuVault Setup"></a>2.3. DocuVault Setup
+### DocuVault Setup
  
 ![alt text](./img/image-2.png)
 - SharePoint Usage: Specifies the value of the SharePoint Usage field. 
@@ -87,9 +91,7 @@ Find your id there:
  
 >**NOTE**: The token is stored securely in the database and cannot be accessed externally and will not be used for anything other than the SharePoint integration.
 
-
-
-## <a name="Base Folders"></a>2.4. Base- and Subfolders
+### Base- and Subfolders
 - In DocuVault is, you have a base folder wherein you organize all your documents. You then have subfolders per environment, company and type of entity.
 - Base folder and subfolder fields are split to reduce the amount of manual setup required.
 - The thinking was that it should *automatically* separate the documents for separate environments.
@@ -99,7 +101,7 @@ Find your id there:
 - Further to this, the global default base folder can be overridden per folder mapping.
 
 
-## <a name="SharePoint Folder Mapping"></a>2.5. SharePoint Folder Mapping
+### SharePoint Folder Mapping
 - If a document is uploaded for a table that is specified in the mapping setup, it will create a subfolder in the global base folder for that table using the table caption.
 - Subfolders are appended to the base folder.
 - Subfolders are created for each record using the primary key for that record. (Some special characters may have been removed)
@@ -113,7 +115,6 @@ Create a new entry for each table that you want to configure.
 Then edit open the card page to edit the mapping conditions.
 
 ![alt text](./img/image-3.png)
-
 
 ![alt text](./img/image-7.png)
 
@@ -143,20 +144,21 @@ Then edit open the card page to edit the mapping conditions.
 For Sales and Purchases, a document linked to a quote will follow the record through its lifecycle all the way to a posted document. It will also carry that link on to archived versions of the document.
 But keep in mind that, the links will refer to the folder where the link was created. It does not move the files; it copies the links to the existing file. E.g. If you create a quote and upload files, then convert to an order and upload files and then post and upload files. You will have documents linked on your posted invoice that reside in the original quote, order and posted invoice folders.
 
-## <a name="Extending the functionality"></a>2.6. Extending the functionality
+### Extending the functionality
 If required, we can assist you with extending your environment with SharePoint attachments, by adding the SharePoint factbox for custom tables or redirecting the default save location.
 
-# <a name="SharePoint Documents factbox"></a>3. SharePoint Documents factbox
+## SharePoint Documents factbox
 - We will endeavour to keep up with standard Business Central and with each major version, update DocuVault to have the factbox added where there was a Documents attachment factbox.
   
  ![alt text](./img/image-5.png)
+
 - Open folder in SharePoint: Opens the folder in the browser (if the folder exists, else you might get a 404 NOT FOUND error page) – folders are automatically created when files are uploaded.
 - Show details: A list page for the attachments that allows you to rename files, view the credentials of the user that uploaded the files and the timestamp.
 - Upload files: Displays a dialog that allows the user to upload documents. Multiple documents can be uploaded at a time.
 - Delete: Delete the link to this record. If there are no more links to the file, the file is also deleted from SharePoint.
 - Get folder Content: If the record was created retrospectively, i.e. there is a SharePoint folder for the record that will be reachable using the folder mapping and record naming conventions, or files have been added via a different interface, this feature can be used to link to those files to the record automatically.
 
-# <a name="Migrate Document Attachments to SharePoint"></a>4. Migrate Document Attachments to SharePoint
+## Migrate Document Attachments to SharePoint
 ![alt text](./img/image-6.png)
 
 Allows the user to move all embedded files to SharePoint. It will maintain record links where available. Orphaned files will be added to an orphaned folder so that the user can action them manually where and if needed. 
