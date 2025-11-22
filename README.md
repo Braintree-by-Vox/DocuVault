@@ -15,3 +15,4 @@ Before using DocuVault, some initial setups and configurations are required.
 
 ## Extending DocuVault functionality
 If required, we can assist you with extending your environment with SharePoint attachments, by adding the SharePoint factbox for custom tables or redirecting the default save location.
+
