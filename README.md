@@ -1,20 +1,5 @@
 DOCUVAULT
 ---
-
-- [Overview](#1-introduction)
-- [Setup and Configuration](#2-setup-and-configuration)
-  - [Azure App Registration](#21-azure-app-registration)
-  - [SharePoint Access](#22-sharepoint-access)
-  - [DocuVault Setup](#23-docuvault-setup)
-  - [Base- and Subfolders](#24-base--and-subfolders)
-  - [SharePoint Folder Mapping](#25-sharepoint-folder-mapping)
-    - [SharePoint Folder Mappings List](#sharepoint-folder-mappings-list)
-  - [Extending the functionality](#26-extending-the-functionality)
-- [SharePoint Documents factbox](#3-sharepoint-documents-factbox)
-- [Migrate Document Attachments to SharePoint](#4-migrate-document-attachments-to-sharepoint)
-
-# <a name="Overview"></a>1. Introduction
-
 The DocuVault extension for Microsoft Dynamics 365 Business Central is the SharePoint integration offering from Braintree.
 
 The extension includes the following features:
@@ -25,6 +10,17 @@ The extension includes the following features:
 - Migrate embedded attachments to SharePoint.
 - Maintains links from quote through to Posted Documents and archived versions
 - Upload multiple documents at a time
+
+- [Setup and Configuration](#2-setup-and-configuration)
+  - [Azure App Registration](#21-azure-app-registration)
+  - [SharePoint Access](#22-sharepoint-access)
+  - [DocuVault Setup](#23-docuvault-setup)
+  - [Base- and Subfolders](#24-base--and-subfolders)
+  - [SharePoint Folder Mapping](#25-sharepoint-folder-mapping)
+    - [SharePoint Folder Mappings List](#sharepoint-folder-mappings-list)
+  - [Extending the functionality](#26-extending-the-functionality)
+- [SharePoint Documents factbox](#3-sharepoint-documents-factbox)
+- [Migrate Document Attachments to SharePoint](#4-migrate-document-attachments-to-sharepoint)
 
 # <a name="Setup and Configuration"></a>2. Setup and Configuration
 
