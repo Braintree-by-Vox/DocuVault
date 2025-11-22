@@ -124,8 +124,4 @@ Next, open the card page to edit the mapping conditions.
 For Sales and Purchases, a document linked to a quote will follow the record through its lifecycle all the way to a posted document. It will also carry that link on to archived versions of the document.
 However, keep in mind that the links will refer to the folder where the link was created. It does not move the files; it copies the links to the existing file. E.g. If you create a quote and upload files, then convert to an order and upload files and then post and upload files, you will have documents linked on your posted invoice that reside in the original quote, order and posted invoice folders.
 
-### Extending the functionality
-If required, we can assist you with extending your environment with SharePoint attachments, by adding the SharePoint factbox for custom tables or redirecting the default save location.
-
-
 [**⬆️ Back to Top**](#content) &nbsp;&nbsp;&nbsp;&nbsp; [**🏠 Home**](/DocuVault)
