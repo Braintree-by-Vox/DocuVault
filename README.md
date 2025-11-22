@@ -1,21 +1,19 @@
 DOCUVAULT
 ---
 
-- [1. Introduction](#1-introduction)
-- [2. Setup and Configuration](#2-setup-and-configuration)
-  - [2.1. Azure App Registration](#21-azure-app-registration)
-  - [2.2. SharePoint Access](#22-sharepoint-access)
-  - [2.3. DocuVault Setup](#23-docuvault-setup)
-  - [2.4. Base- and Subfolders](#24-base--and-subfolders)
-  - [2.5. SharePoint Folder Mapping](#25-sharepoint-folder-mapping)
+- [Overview](#1-introduction)
+- [Setup and Configuration](#2-setup-and-configuration)
+  - [Azure App Registration](#21-azure-app-registration)
+  - [SharePoint Access](#22-sharepoint-access)
+  - [DocuVault Setup](#23-docuvault-setup)
+  - [Base- and Subfolders](#24-base--and-subfolders)
+  - [SharePoint Folder Mapping](#25-sharepoint-folder-mapping)
     - [SharePoint Folder Mappings List](#sharepoint-folder-mappings-list)
-  - [2.6. Extending the functionality](#26-extending-the-functionality)
-- [3. SharePoint Documents factbox](#3-sharepoint-documents-factbox)
-- [4. Migrate Document Attachments to SharePoint](#4-migrate-document-attachments-to-sharepoint)
-- [5. Troubleshooting](#5-troubleshooting)
+  - [Extending the functionality](#26-extending-the-functionality)
+- [SharePoint Documents factbox](#3-sharepoint-documents-factbox)
+- [Migrate Document Attachments to SharePoint](#4-migrate-document-attachments-to-sharepoint)
 
-
-# <a name="Introduction"></a>1. Introduction
+# <a name="Overview"></a>1. Introduction
 
 The DocuVault extension for Microsoft Dynamics 365 Business Central is the SharePoint integration offering from Braintree.
 
@@ -167,9 +165,11 @@ If required, we can assist you with extending your environment with SharePoint a
 
 Allows the user to move all embedded files to SharePoint. It will maintain record links where available. Orphaned files will be added to an orphaned folder so that the user can action them manually where and if needed. 
 
+[**⬆️ Back to Top**](#content) &nbsp;&nbsp;&nbsp;&nbsp; [**🏠 Home**](/Braintree-theme)
 
+
+<!-- 
 # <a name="Troubleshooting"></a>5. Troubleshooting
 If you encounter any issues or errors while using the DocuVault extension please contact Braintree support, providing details such as error messages and the steps leading to the problem for efficient troubleshooting.
 
-Email: bcsupport@braintree.co.za
-
+Email: bcsupport@braintree.co.za -->
