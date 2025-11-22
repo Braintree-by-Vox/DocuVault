@@ -5,4 +5,3 @@ theme: jekyll-theme-cayman
 show_downloads: true
 github:
   is_project_page: false
-remote_theme: Braintree-by-Vox/Braintree-theme
