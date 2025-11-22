@@ -10,3 +10,5 @@ The DocuVault extension for Microsoft Dynamics 365 Business Central provides dir
 
 ## [Setup and Configuration](Configuration)
 Before using DocuVault, some initial setups and configurations are required.
+
+## [Operation](Operation)
