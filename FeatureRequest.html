@@ -139,32 +139,96 @@ document.getElementById('feature-request-form').addEventListener('submit', funct
     timestamp: new Date().toISOString()
   };
   
-  // Display success message
+  // Show loading message
   const messageDiv = document.getElementById('submission-message');
   messageDiv.innerHTML = `
-    <div class="success-message">
-      <h4>✓ Feature Request Submitted Successfully!</h4>
-      <p>Thank you, ${formData.name}! We've received your feature request: <strong>"${formData.title}"</strong></p>
-      <p>Our team will review it and get back to you at ${formData.email}</p>
-      <p>Would you like to <a href="#" onclick="startTeamsChat(); return false;">discuss this feature via Teams</a>?</p>
+    <div class="loading-message">
+      <h4>⏳ Submitting your feature request...</h4>
+      <p>Please wait while we create a GitHub issue.</p>
     </div>
   `;
   messageDiv.style.display = 'block';
   
-  // Log to console (in production, this would send to a backend)
-  console.log('Feature Request Submitted:', formData);
-  
-  // Scroll to message
-  messageDiv.scrollIntoView({ behavior: 'smooth' });
-  
-  // Optionally reset form after a delay
-  setTimeout(() => {
-    if (confirm('Would you like to submit another feature request?')) {
-      document.getElementById('feature-request-form').reset();
-      messageDiv.style.display = 'none';
-    }
-  }, 5000);
+  // Create GitHub issue
+  createGitHubIssue(formData);
 });
+
+async function createGitHubIssue(formData) {
+  const messageDiv = document.getElementById('submission-message');
+  
+  try {
+    // Construct issue body
+    const issueBody = `
+## Feature Request
+
+**Submitted by:** ${formData.name}
+**Email:** ${formData.email}
+**Category:** ${formData.category}
+**Priority:** ${formData.priority}
+**Date:** ${new Date(formData.timestamp).toLocaleString()}
+
+### Description
+${formData.description}
+
+${formData.useCase ? `### Use Case / Business Value\n${formData.useCase}` : ''}
+`;
+
+    // Construct labels based on category and priority
+    const labels = ['feature-request', formData.category];
+    if (formData.priority === 'high' || formData.priority === 'critical') {
+      labels.push('priority-' + formData.priority);
+    }
+
+    // GitHub repository info
+    const owner = 'Braintree-by-Vox';
+    const repo = 'DocuVault';
+    
+    // Create GitHub issue URL (using GitHub's issue creation form)
+    const issueTitle = encodeURIComponent(formData.title);
+    const issueBodyEncoded = encodeURIComponent(issueBody);
+    const labelsParam = labels.map(l => encodeURIComponent(l)).join(',');
+    
+    const githubUrl = `https://github.com/${owner}/${repo}/issues/new?title=${issueTitle}&body=${issueBodyEncoded}&labels=${labelsParam}`;
+    
+    // Display success message with link to GitHub
+    messageDiv.innerHTML = `
+      <div class="success-message">
+        <h4>✓ Feature Request Ready to Submit!</h4>
+        <p>Thank you, ${formData.name}! We've prepared your feature request: <strong>"${formData.title}"</strong></p>
+        <p>Click the button below to create the issue on GitHub:</p>
+        <p style="margin-top: 1rem;">
+          <a href="${githubUrl}" target="_blank" class="braintree-button" style="text-decoration: none; display: inline-block;">
+            📝 Create GitHub Issue
+          </a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+          Note: You'll need to be logged into GitHub to create the issue.
+        </p>
+        <p>Would you like to <a href="#" onclick="startTeamsChat(); return false;">discuss this feature via Teams</a>?</p>
+      </div>
+    `;
+    messageDiv.style.display = 'block';
+    
+    // Log to console
+    console.log('Feature Request Prepared:', formData);
+    console.log('GitHub URL:', githubUrl);
+    
+    // Scroll to message
+    messageDiv.scrollIntoView({ behavior: 'smooth' });
+    
+  } catch (error) {
+    console.error('Error preparing GitHub issue:', error);
+    messageDiv.innerHTML = `
+      <div class="error-message">
+        <h4>⚠️ Error Preparing Feature Request</h4>
+        <p>We encountered an issue preparing your feature request. Please try again or contact us directly at bcsupport@braintree.co.za</p>
+        <p style="margin-top: 1rem;">
+          <button class="braintree-button" onclick="sendEmail()">📧 Send via Email Instead</button>
+        </p>
+      </div>
+    `;
+  }
+}
 
 function openChatDiscussion() {
   const featureTitle = document.getElementById('feature-title').value;
@@ -306,6 +370,42 @@ function sendEmail() {
 
 .success-message p {
   color: #1b5e20;
+  margin: 0.5rem 0;
+}
+
+.loading-message {
+  background-color: #fff3cd;
+  border: 2px solid #ffc107;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.loading-message h4 {
+  color: #856404;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.loading-message p {
+  color: #856404;
+  margin: 0.5rem 0;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  border: 2px solid #f5c6cb;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.error-message h4 {
+  color: #721c24;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.error-message p {
+  color: #721c24;
   margin: 0.5rem 0;
 }
 
