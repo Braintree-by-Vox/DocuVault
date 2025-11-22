@@ -13,15 +13,15 @@ The extension includes the following features:
 
 ## Content
 - [Setup and Configuration](#setup-and-configuration)
-  - [Azure App Registration](#21-azure-app-registration)
-  - [SharePoint Access](#22-sharepoint-access)
-  - [DocuVault Setup](#23-docuvault-setup)
-  - [Base- and Subfolders](#24-base--and-subfolders)
-  - [SharePoint Folder Mapping](#25-sharepoint-folder-mapping)
+  - [Azure App Registration](#azure-app-registration)
+  - [SharePoint Access](sharepoint-access)
+  - [DocuVault Setup](docuvault-setup)
+  - [Base- and Subfolders](base--and-subfolders)
+  - [SharePoint Folder Mapping](sharepoint-folder-mapping)
     - [SharePoint Folder Mappings List](#sharepoint-folder-mappings-list)
-  - [Extending the functionality](#26-extending-the-functionality)
-- [SharePoint Documents factbox](#3-sharepoint-documents-factbox)
-- [Migrate Document Attachments to SharePoint](#4-migrate-document-attachments-to-sharepoint)
+  - [Extending the functionality](#extending-the-functionality)
+- [SharePoint Documents factbox](#using-the-sharepoint-documents-factbox)
+- [Migrate Document Attachments to SharePoint](#migrate-document-attachments-to-sharepoint)
 
 <!-- # <a name="Setup and Configuration"></a>2. Setup and Configuration -->
 
@@ -144,12 +144,12 @@ But keep in mind that, the links will refer to the folder where the link was cre
 ### Extending the functionality
 If required, we can assist you with extending your environment with SharePoint attachments, by adding the SharePoint factbox for custom tables or redirecting the default save location.
 
-## SharePoint Documents factbox
-- We will endeavour to keep up with standard Business Central and with each major version, update DocuVault to have the factbox added where there was a Documents attachment factbox.
+## Using the SharePoint Documents factbox
+We will endeavour to keep up with standard Business Central and with each major version, update DocuVault to have the factbox added where there was a Documents attachment factbox.
   
  ![alt text](./img/image-5.png)
 
-- Open folder in SharePoint: Opens the folder in the browser (if the folder exists, else you might get a 404 NOT FOUND error page) – folders are automatically created when files are uploaded.
+- Open folder in SharePoint: Opens the folder in the browser. ()If the folder does not exist, you may get a 404 NOT FOUND error page). Folders are automatically created when files are uploaded.
 - Show details: A list page for the attachments that allows you to rename files, view the credentials of the user that uploaded the files and the timestamp.
 - Upload files: Displays a dialog that allows the user to upload documents. Multiple documents can be uploaded at a time.
 - Delete: Delete the link to this record. If there are no more links to the file, the file is also deleted from SharePoint.
