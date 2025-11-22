@@ -24,6 +24,7 @@ The extension includes the following features:
 - [Migrate Document Attachments to SharePoint](#migrate-document-attachments-to-sharepoint)
 
 <!-- # <a name="Setup and Configuration"></a>2. Setup and Configuration -->
+<a name="setup-and-configuration"></a>
 
 ## Setup and Configuration
 
