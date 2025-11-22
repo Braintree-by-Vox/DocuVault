@@ -44,7 +44,6 @@ To find your SharePoint Site ID, you can follow these steps:
 
 > **NOTE**: Use the **Site ID** in the DocuVault Setup and the below queries.
 
-
 ### SharePoint Access
 
 To find your SharePoint Drive ID and grant access to the App Registration in SharePoint:    
@@ -100,7 +99,6 @@ Find your id there:
 - The global default base folder can be overridden by the **Custom Base Folder** field in the DocuVault Setup.
 - Further to this, the global default base folder can be overridden per folder mapping.
 
-
 ### SharePoint Folder Mapping
 - If a document is uploaded for a table that is specified in the mapping setup, it will create a subfolder in the global base folder for that table using the table caption.
 - Subfolders are appended to the base folder.
@@ -110,7 +108,6 @@ Find your id there:
 Take care of file operations in Sandbox!
 
 ### SharePoint Folder Mappings List
-
 Create a new entry for each table that you want to configure.
 Then edit open the card page to edit the mapping conditions.
 
@@ -164,7 +161,6 @@ If required, we can assist you with extending your environment with SharePoint a
 Allows the user to move all embedded files to SharePoint. It will maintain record links where available. Orphaned files will be added to an orphaned folder so that the user can action them manually where and if needed. 
 
 [**⬆️ Back to Top**](#content) &nbsp;&nbsp;&nbsp;&nbsp; [**🏠 Home**](/Braintree-theme)
-
 
 <!-- 
 # <a name="Troubleshooting"></a>5. Troubleshooting
