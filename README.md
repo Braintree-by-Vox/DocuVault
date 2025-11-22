@@ -13,13 +13,13 @@ The extension includes the following features:
 
 ## Content
 - [Configure DocuVault](#setup-and-configuration)
-  - [Azure App Registration](#azure-app-registration)
+  <!-- - [Azure App Registration](#azure-app-registration)
   - [SharePoint Access](sharepoint-access)
   - [DocuVault Setup](docuvault-setup)
   - [Base- and Subfolders](base--and-subfolders)
   - [SharePoint Folder Mapping](sharepoint-folder-mapping)
     - [SharePoint Folder Mappings List](#sharepoint-folder-mappings-list)
-  - [Extending the functionality](#extending-the-functionality)
+  - [Extending the functionality](#extending-the-functionality) -->
 - [SharePoint Documents factbox](#using-the-sharepoint-documents-factbox)
 - [Migrate Document Attachments to SharePoint](#migrate-document-attachments-to-sharepoint)
 
