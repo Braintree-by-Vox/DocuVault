@@ -12,7 +12,7 @@ The extension includes the following features:
 - Upload multiple documents at a time
 
 ## Content
-- [Setup and Configuration](#setup-and-configuration)
+- [Configure DocuVault](#setup-and-configuration)
   - [Azure App Registration](#azure-app-registration)
   - [SharePoint Access](sharepoint-access)
   - [DocuVault Setup](docuvault-setup)
@@ -23,14 +23,14 @@ The extension includes the following features:
 - [SharePoint Documents factbox](#using-the-sharepoint-documents-factbox)
 - [Migrate Document Attachments to SharePoint](#migrate-document-attachments-to-sharepoint)
 
-<a name="setup-and-configuration"></a>
-## Setup and Configuration
+<h2 id="setup-and-configuration">Setup and Configuration</h2>
 
 To start using DocuVault, some initial setup and configuration are required.
 
 ### Azure App Registration
 
 You need to create an app registration in Azure with the Sites.Selected permission:
+
      ![alt text](./img/image.png)
 
 > **NOTE**: Use the **Client ID** and **Client Secret** in the DocuVault Setup
