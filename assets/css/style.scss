@@ -2,7 +2,8 @@
 ---
 
 // Import custom variables first to override defaults
-@import "lightspeed-variables";
+// @import "lightspeed-variables";
+@import "braintree";
 
 // Then import the theme
 @import "{{ site.theme }}";
