@@ -4,7 +4,8 @@ $medium-breakpoint: 42em !default;
 
 // Headers
 $header-heading-color: #fff !default;
-$header-bg-color: #328278 !default;
+// $header-bg-color: #328278 !default;
+$header-bg-color: #92D400 !default;
 $header-bg-color-secondary: #003433 !default;
 
 // Text
@@ -25,7 +26,7 @@ $hr-border-color: #eff0f1 !default;
 // Braintree
 $braintree-font:#328278 !default;
 // $braintree-background: lightcyan !default;
-$braintree-background: mintcream !default;
+$braintree-background: linear-gradient(to bottom, #003433, #00DAA4) !default;
 $braintree-navbar: lightcyan !default;
 $braintree-contact: #ffffff !default;
 $braintree-border: #328278 !default;

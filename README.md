@@ -141,10 +141,11 @@ However, keep in mind that the links will refer to the folder where the link was
 If required, we can assist you with extending your environment with SharePoint attachments, by adding the SharePoint factbox for custom tables or redirecting the default save location.
 
 ## Using the SharePoint Documents factbox
-We will endeavour to keep up with standard Business Central and with each major version, update DocuVault to have the factbox added where there was a Documents attachment factbox.
+The DocuVault factbox replaces the standard Business Central Attachments factbox.
   
  ![alt text](./img/image-5.png)
 
+The following functions are provided:
 - Open folder in SharePoint: Opens the folder in the browser. ()If the folder does not exist, you may get a 404 NOT FOUND error page). Folders are automatically created when files are uploaded.
 - Show details: A list page for the attachments that allows you to rename files, view the credentials of the user that uploaded the files and the timestamp.
 - Upload files: Displays a dialog that allows the user to upload documents. Multiple documents can be uploaded at a time.
@@ -156,7 +157,7 @@ We will endeavour to keep up with standard Business Central and with each major 
 
 Allows the user to move all embedded files to SharePoint. It will maintain record links where available. Orphaned files will be added to an orphaned folder so that the user can action them manually where and if needed. 
 
-[**⬆️ Back to Top**](#content) &nbsp;&nbsp;&nbsp;&nbsp; [**🏠 Home**](/Braintree-theme)
+[**⬆️ Back to Top**](#content) &nbsp;&nbsp;&nbsp;&nbsp; [**🏠 Home**](/Docuvault)
 
 <!-- 
 # <a name="Troubleshooting"></a>5. Troubleshooting
